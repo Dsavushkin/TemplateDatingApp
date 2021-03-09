@@ -17,6 +17,7 @@
 		6842D6A925F4DD48002608DA /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6842D6A825F4DD48002608DA /* Settings.swift */; };
 		6842D6B025F4ED25002608DA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6842D6AF25F4ED25002608DA /* UIColor.swift */; };
 		6842D6B525F7464C002608DA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6842D6B425F7464C002608DA /* Profile.storyboard */; };
+		6842D6B925F7B1BF002608DA /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6842D6B825F7B1BF002608DA /* Registration.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		6842D6A825F4DD48002608DA /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		6842D6AF25F4ED25002608DA /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		6842D6B425F7464C002608DA /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		6842D6B825F7B1BF002608DA /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				6842D69425F4D6B6002608DA /* Main.storyboard */,
 				6842D6B425F7464C002608DA /* Profile.storyboard */,
+				6842D6B825F7B1BF002608DA /* Registration.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6842D6B925F7B1BF002608DA /* Registration.storyboard in Resources */,
 				6842D69E25F4D6B8002608DA /* LaunchScreen.storyboard in Resources */,
 				6842D69B25F4D6B8002608DA /* Assets.xcassets in Resources */,
 				6842D6B525F7464C002608DA /* Profile.storyboard in Resources */,
