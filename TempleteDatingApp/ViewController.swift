@@ -9,11 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = MainSettings.logotype
+        imageView?.image = MainSettings.logotype
         view.backgroundColor = MainSettings.generalColor
     }
 
