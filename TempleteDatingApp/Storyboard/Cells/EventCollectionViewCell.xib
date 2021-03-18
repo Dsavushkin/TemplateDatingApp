@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="eventCell" reuseIdentifier="eventCell" id="gTV-IL-0wX" customClass="EventCollectionViewCell" customModule="TempleteDatingApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="281" height="146"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="281" height="146"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taylor Swift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppG-E4-gQQ">
+                        <rect key="frame" x="20" y="23" width="241" height="29"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club Devil, 5th Avenue, 287" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuX-xD-tq0">
+                        <rect key="frame" x="20" y="114" width="261" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="CO4-2N-89h"/>
+                            <constraint firstAttribute="width" constant="261" id="CdR-G0-6GD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.65490196078431373" green="0.57647058823529407" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wen, 21 Aug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVj-hW-11i">
+                        <rect key="frame" x="20" y="94" width="261" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="261" id="XlS-Jj-yEQ"/>
+                            <constraint firstAttribute="height" constant="16" id="Xxu-VV-zqf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.37254901960784315" green="0.34509803921568627" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" red="1" green="0.85882352941176465" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="DuX-xD-tq0" firstAttribute="top" secondItem="bVj-hW-11i" secondAttribute="bottom" constant="4" id="63W-v0-nta"/>
+                <constraint firstItem="bVj-hW-11i" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="20" id="8Ln-c2-ef4"/>
+                <constraint firstItem="ppG-E4-gQQ" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="CtZ-Hh-97Y"/>
+                <constraint firstItem="DuX-xD-tq0" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="20" id="Dxk-nD-NBT"/>
+                <constraint firstItem="ppG-E4-gQQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="23" id="NL7-Iu-riK"/>
+                <constraint firstItem="ppG-E4-gQQ" firstAttribute="leading" secondItem="bVj-hW-11i" secondAttribute="leading" id="PxB-cH-QAQ"/>
+                <constraint firstAttribute="bottom" secondItem="bVj-hW-11i" secondAttribute="bottom" constant="36" id="ex5-l3-Hk1"/>
+                <constraint firstItem="bVj-hW-11i" firstAttribute="top" secondItem="ppG-E4-gQQ" secondAttribute="bottom" constant="42" id="f2l-uc-IM2"/>
+            </constraints>
+            <size key="customSize" width="281" height="146"/>
+            <connections>
+                <outlet property="adressLabel" destination="DuX-xD-tq0" id="5qG-jT-z1J"/>
+                <outlet property="dateLabel" destination="bVj-hW-11i" id="6Az-eo-pTa"/>
+                <outlet property="titleLabel" destination="ppG-E4-gQQ" id="ZW8-VZ-CWZ"/>
+            </connections>
+            <point key="canvasLocation" x="277.536231884058" y="79.6875"/>
+        </collectionViewCell>
+    </objects>
+</document>

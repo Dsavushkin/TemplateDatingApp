@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cnp-Er-vGw">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="JqC-JD-X6U">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uwS-KZ-eaW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController navigationBarHidden="YES" id="Cnp-Er-vGw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="map" catalog="system" id="GkI-9R-K6e"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aiw-rN-EQG">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uvF-Zx-i7A" kind="relationship" relationship="rootViewController" id="feD-vK-sTb"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-767" y="54"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yqb-Rz-F7L">
+            <objects>
+                <viewController id="uvF-Zx-i7A" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L01-4S-vpS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gku-nb-OFQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jVt-1C-WHT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jVt-1C-WHT" firstAttribute="trailing" secondItem="gku-nb-OFQ" secondAttribute="trailing" id="62F-4j-L1P"/>
+                            <constraint firstItem="gku-nb-OFQ" firstAttribute="leading" secondItem="jVt-1C-WHT" secondAttribute="leading" id="m3s-cV-zZH"/>
+                            <constraint firstItem="gku-nb-OFQ" firstAttribute="top" secondItem="L01-4S-vpS" secondAttribute="top" id="nSu-Vo-GgX"/>
+                            <constraint firstItem="gku-nb-OFQ" firstAttribute="bottom" secondItem="jVt-1C-WHT" secondAttribute="bottom" constant="83" id="uAk-Kd-0Hy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xqN-Wc-CL3"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kd1-Of-E6G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3" y="54"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="map" catalog="system" width="128" height="110"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

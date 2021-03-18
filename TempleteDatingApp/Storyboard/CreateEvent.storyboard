@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JDa-S7-rfb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="OE9-cZ-CQA">
+            <objects>
+                <navigationController id="JDa-S7-rfb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="plus" catalog="system" id="CCU-bi-n2p"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QWo-Z6-wxF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sSs-mA-jHx" kind="relationship" relationship="rootViewController" id="rEi-iv-dlm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vPT-kw-7QQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-550" y="85"/>
+        </scene>
+        <!--Add event-->
+        <scene sceneID="B6B-Vm-TAG">
+            <objects>
+                <viewController id="sSs-mA-jHx" customClass="CreateEventViewController" customModule="TempleteDatingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NQ4-XQ-hhQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="acy-KZ-Fkn">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="sSs-mA-jHx" id="fR5-SC-WAh"/>
+                                    <outlet property="delegate" destination="sSs-mA-jHx" id="yrg-KG-uRb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BSe-WJ-6BS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BSe-WJ-6BS" firstAttribute="trailing" secondItem="acy-KZ-Fkn" secondAttribute="trailing" id="Nfx-2s-i9f"/>
+                            <constraint firstItem="acy-KZ-Fkn" firstAttribute="top" secondItem="BSe-WJ-6BS" secondAttribute="top" id="Y3V-hW-Dph"/>
+                            <constraint firstItem="BSe-WJ-6BS" firstAttribute="bottom" secondItem="acy-KZ-Fkn" secondAttribute="bottom" id="luY-uD-Go8"/>
+                            <constraint firstItem="acy-KZ-Fkn" firstAttribute="leading" secondItem="BSe-WJ-6BS" secondAttribute="leading" id="qR1-Ur-jSH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add event" id="Cu4-Fe-R1M"/>
+                    <connections>
+                        <outlet property="tableView" destination="acy-KZ-Fkn" id="0f7-iV-eKk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yRR-se-jeu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
