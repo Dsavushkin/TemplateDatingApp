@@ -7,15 +7,34 @@
 
 import UIKit
 
-class EventDetailsViewController: UIViewController {
+class EventDetailsViewController: UIViewController, UIGestureRecognizerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
+//    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var intrestedButton: CustomButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        navigationController?.delegate = self
+        navigationController?.barHideOnSwipeGestureRecognizer.isEnabled = true
         
+//        scrollView.isScrollEnabled = true
+        
+//        scrollView.contentSize.height = scrollView.frame.height
+        scrollView.isScrollEnabled = true
+        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 22000)
+//
+//        self.scrollView.contentSize.height = scrollView.frame.height + 1000
+
         collectionView.register(UINib(nibName: "ShortPeopleCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "imagePeopleCell")
         
+        
+        let recognizer = UILongPressGestureRecognizer()
+        recognizer.addTarget(self, action: #selector(handleLongPressGesture(_:)))
+        view.addGestureRecognizer(recognizer)
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
 //        navigationController?.navigationBar.backgroundColor = .clear
         // Do any additional setup after loading the view.
     }
@@ -26,15 +45,16 @@ class EventDetailsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
-        self.navigationController?.navigationBar.shadowImage = nil
-        self.navigationController?.navigationBar.isTranslucent = false
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+        navigationController?.navigationBar.shadowImage = nil
+        navigationController?.navigationBar.isTranslucent = false
     }
     /*
     // MARK: - Navigation
@@ -45,7 +65,21 @@ class EventDetailsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+ 
+    @objc func handleLongPressGesture(_ gestureRecognizer: UILongPressGestureRecognizer) {
+        print("12345")
+    }
+    
+    @IBAction func backSlide(_ sender: UIScreenEdgePanGestureRecognizer) {
+        navigationController?.popToRootViewController(animated: true)
+        print("123")
+    }
 
+
+    @IBAction func intrestedButton(_ sender: CustomButton) {
+        print("ButtonAction")
+    }
+    
 }
 
 extension EventDetailsViewController: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -57,6 +91,10 @@ extension EventDetailsViewController: UICollectionViewDelegate, UICollectionView
         let item = collectionView.dequeueReusableCell(withReuseIdentifier: "imagePeopleCell", for: indexPath) as! ShortPeopleCollectionViewCell
         item.imageView.image = UIImage(named: "MgEoFFZ2Fmc")
         return item
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(identifier: "ProfileViewController")
+        present(vc, animated: true, completion: nil)
     }
     
     

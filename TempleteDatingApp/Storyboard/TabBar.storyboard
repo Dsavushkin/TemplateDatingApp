@@ -16,26 +16,6 @@
             </objects>
             <point key="canvasLocation" x="202" y="-419"/>
         </scene>
-        <!--Messanger-->
-        <scene sceneID="Iqb-aS-JTY">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Messanger" id="Vu4-08-XcO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gXq-kY-dB3"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uUw-k9-mNI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="202" y="-350"/>
-        </scene>
-        <!--Map-->
-        <scene sceneID="4ez-2f-tWK">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Map" id="lZl-yM-PXr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="A5o-0h-Day"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZyP-fj-DuF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="201" y="-271"/>
-        </scene>
         <!--Profile-->
         <scene sceneID="Z7g-lq-73Z">
             <objects>
@@ -67,9 +47,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="fIE-WR-9fK" kind="relationship" relationship="viewControllers" id="M2C-og-e1s"/>
-                        <segue destination="lZl-yM-PXr" kind="relationship" relationship="viewControllers" id="Mv5-eP-w7u"/>
                         <segue destination="4V7-TB-X4i" kind="relationship" relationship="viewControllers" id="nVv-2E-ePn"/>
-                        <segue destination="Vu4-08-XcO" kind="relationship" relationship="viewControllers" id="Y9L-9R-ztD"/>
                         <segue destination="Fub-XQ-NFg" kind="relationship" relationship="viewControllers" id="aZq-aK-2jb"/>
                     </connections>
                 </tabBarController>

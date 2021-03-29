@@ -7,12 +7,14 @@
 
 import UIKit
 
+
 class MainViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView?
     @IBOutlet weak var popularEventCollectionView: UICollectionView!
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
-    @IBOutlet weak var searchBar: UISearchBar!
+//    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var headerView: UICollectionReusableView!
     override func viewDidLoad() {
@@ -20,9 +22,10 @@ class MainViewController: UIViewController {
         navigationController?.isToolbarHidden = true
         collectionView?.register(UINib(nibName: "EventCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "eventCell")
         popularEventCollectionView?.register(UINib(nibName: "EventCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "eventCell")
-        searchBar.heightAnchor.constraint(equalToConstant: 200).isActive = true
+//        searchBar.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
-
+//        scrollView.contentSize.height = 2000
+        
 
         // Do any additional setup after loading the view.
     }
@@ -44,9 +47,9 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case collectionView:
-            return 10
-        case popularEventCollectionView:
             return 20
+        case popularEventCollectionView:
+            return 1
         default:
             return 0
         }
@@ -85,10 +88,41 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             return CGSize(width: collectionView.frame.width/1.3, height: collectionView.bounds.height)
     }
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let reusableview = popularEventCollectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerPopularCell", for: indexPath)
         
         return reusableview
     }
+}
+
+
+extension MainViewController: UISearchBarDelegate{
+    
+    //SearchBar
+    
+//        let url = "https://jsonplaceholder.typicode.com/posts"
+        
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText != "" {
+            let alert = UIAlertController.init(title: "123", message: "123", preferredStyle: .actionSheet)
+            alert.addAction(.init(title: "123", style: .default, handler:  {_ in
+                alert.dismiss(animated: true, completion: nil)
+                                  }))
+            present(alert, animated: true, completion: nil)
+        }
+        print(searchText)
+    }
+    
+    
+}
+
+
+class Post: Codable {
+    let title: String
+    let description: String
+    let id: String
+    let body: String
 }
