@@ -13,10 +13,13 @@ class EventDetailsViewController: UIViewController, UIGestureRecognizerDelegate,
 //    @IBOutlet var scrollView: UIScrollView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var intrestedButton: CustomButton!
+    @IBOutlet weak var authorImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
+        
         navigationController?.delegate = self
         navigationController?.barHideOnSwipeGestureRecognizer.isEnabled = true
         
@@ -24,10 +27,12 @@ class EventDetailsViewController: UIViewController, UIGestureRecognizerDelegate,
         
 //        scrollView.contentSize.height = scrollView.frame.height
         scrollView.isScrollEnabled = true
-        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 22000)
+//        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 22000)
 //
 //        self.scrollView.contentSize.height = scrollView.frame.height + 1000
 
+        authorImageView.layer.cornerRadius = 15
+    
         collectionView.register(UINib(nibName: "ShortPeopleCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "imagePeopleCell")
         
         

@@ -24,8 +24,7 @@ class MainViewController: UIViewController {
         popularEventCollectionView?.register(UINib(nibName: "EventCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "eventCell")
 //        searchBar.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
-//        scrollView.contentSize.height = 2000
-        
+//        scrollView.frameLayoutGuide.bottomAnchor.constraint(equalToSystemSpacingBelow: popularEventCollectionView.bottomAnchor, multiplier: 0).isActive = true
 
         // Do any additional setup after loading the view.
     }
@@ -40,26 +39,29 @@ class MainViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+    }
 }
 
 extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch collectionView {
-        case collectionView:
-            return 20
-        case popularEventCollectionView:
-            return 1
-        default:
-            return 0
-        }
+//        switch collectionView {
+//        case popularEventCollectionView:
+//            return 20
+//        default:
+//            return 5
+//        }
+        return 20
     }
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         switch collectionView {
         case popularEventCollectionView:
-            return 2
+            return 1
         default:
             return 1
         }
@@ -70,12 +72,19 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         switch collectionView {
         case collectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "eventCell", for: indexPath) as! EventCollectionViewCell
+            cell.titleLabel.text = "NEBOSTARS"
+            cell.dateLabel.text = "Пятница, 2 Апреля"
+            cell.adressLabel.text = "Спортивная 68"
+
                 return cell
         case popularEventCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "eventCell", for: indexPath) as! EventCollectionViewCell
+            cell.titleLabel.text = "NEBOSTARS"
                 return cell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "eventCell", for: indexPath) as! EventCollectionViewCell
+            cell.titleLabel.text = "NEBOSTARS"
+
                 return cell
         }
    

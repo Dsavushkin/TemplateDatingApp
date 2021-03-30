@@ -41,6 +41,9 @@ class ProfileViewController: UIViewController {
     }
     
     
+    @IBAction func followingAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "list", sender: nil)
+    }
     
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -53,7 +56,7 @@ class ProfileViewController: UIViewController {
 extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

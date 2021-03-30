@@ -29,6 +29,9 @@
 		685ACC75260003DB00D5B256 /* AddEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685ACC73260003DB00D5B256 /* AddEventTableViewCell.swift */; };
 		685ACC76260003DB00D5B256 /* AddEventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 685ACC74260003DB00D5B256 /* AddEventTableViewCell.xib */; };
 		685ACC7A26000AF000D5B256 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685ACC7926000AF000D5B256 /* LoginViewController.swift */; };
+		688D30862612CEBE00B29C97 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688D30842612CEBE00B29C97 /* UserTableViewCell.swift */; };
+		688D30872612CEBE00B29C97 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 688D30852612CEBE00B29C97 /* UserTableViewCell.xib */; };
+		688D308A2612D0E800B29C97 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688D30892612D0E800B29C97 /* ListViewController.swift */; };
 		689B3B2F260E1128000F5413 /* PopularEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B3B2D260E1128000F5413 /* PopularEventCollectionViewCell.swift */; };
 		689B3B30260E1128000F5413 /* PopularEventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 689B3B2E260E1128000F5413 /* PopularEventCollectionViewCell.xib */; };
 		68D05FDF25FC019D00272841 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D05FDE25FC019D00272841 /* ProfileViewController.swift */; };
@@ -67,6 +70,9 @@
 		685ACC73260003DB00D5B256 /* AddEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventTableViewCell.swift; sourceTree = "<group>"; };
 		685ACC74260003DB00D5B256 /* AddEventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddEventTableViewCell.xib; sourceTree = "<group>"; };
 		685ACC7926000AF000D5B256 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		688D30842612CEBE00B29C97 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		688D30852612CEBE00B29C97 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		688D30892612D0E800B29C97 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		689B3B2D260E1128000F5413 /* PopularEventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularEventCollectionViewCell.swift; sourceTree = "<group>"; };
 		689B3B2E260E1128000F5413 /* PopularEventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularEventCollectionViewCell.xib; sourceTree = "<group>"; };
 		68D05FDE25FC019D00272841 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +196,7 @@
 			children = (
 				68D05FDE25FC019D00272841 /* ProfileViewController.swift */,
 				685ACC5E25FFF77400D5B256 /* SettingsViewController.swift */,
+				688D30892612D0E800B29C97 /* ListViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -207,6 +214,8 @@
 				685ACC74260003DB00D5B256 /* AddEventTableViewCell.xib */,
 				689B3B2D260E1128000F5413 /* PopularEventCollectionViewCell.swift */,
 				689B3B2E260E1128000F5413 /* PopularEventCollectionViewCell.xib */,
+				688D30842612CEBE00B29C97 /* UserTableViewCell.swift */,
+				688D30852612CEBE00B29C97 /* UserTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -281,6 +290,7 @@
 				6842D69E25F4D6B8002608DA /* LaunchScreen.storyboard in Resources */,
 				685ACC7125FFFFA000D5B256 /* ShortPeopleCollectionViewCell.xib in Resources */,
 				685ACC76260003DB00D5B256 /* AddEventTableViewCell.xib in Resources */,
+				688D30872612CEBE00B29C97 /* UserTableViewCell.xib in Resources */,
 				685ACC5825FFECD700D5B256 /* Map.storyboard in Resources */,
 				6842D69B25F4D6B8002608DA /* Assets.xcassets in Resources */,
 				685ACC6625FFFBDA00D5B256 /* CreateEvent.storyboard in Resources */,
@@ -305,6 +315,7 @@
 				685ACC5C25FFF6BD00D5B256 /* CustomButton.swift in Sources */,
 				68D05FF625FE579300272841 /* CollectionViewCell.swift in Sources */,
 				689B3B2F260E1128000F5413 /* PopularEventCollectionViewCell.swift in Sources */,
+				688D30862612CEBE00B29C97 /* UserTableViewCell.swift in Sources */,
 				685ACC6B25FFFEC300D5B256 /* CreateEventViewController.swift in Sources */,
 				6842D69325F4D6B6002608DA /* ViewController.swift in Sources */,
 				68D05FEC25FE425D00272841 /* EventCollectionViewCell.swift in Sources */,
@@ -320,6 +331,7 @@
 				68D05FFA25FE5DE600272841 /* EventDetailsViewController.swift in Sources */,
 				6842D6A925F4DD48002608DA /* Settings.swift in Sources */,
 				68D05FFD25FE6BEB00272841 /* ExtensionNavigationController.swift in Sources */,
+				688D308A2612D0E800B29C97 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
