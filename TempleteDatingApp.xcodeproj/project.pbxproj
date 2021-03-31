@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		681125462613E30700BD55B6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681125452613E30700BD55B6 /* TabBarViewController.swift */; };
+		6811254B2613E94700BD55B6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6811254A2613E94700BD55B6 /* MapViewController.swift */; };
 		6842D68F25F4D6B6002608DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6842D68E25F4D6B6002608DA /* AppDelegate.swift */; };
 		6842D69125F4D6B6002608DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6842D69025F4D6B6002608DA /* SceneDelegate.swift */; };
 		6842D69325F4D6B6002608DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6842D69225F4D6B6002608DA /* ViewController.swift */; };
@@ -46,6 +48,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		681125452613E30700BD55B6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		6811254A2613E94700BD55B6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		6842D68B25F4D6B6002608DA /* TempleteDatingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TempleteDatingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6842D68E25F4D6B6002608DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6842D69025F4D6B6002608DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		681125442613E2D600BD55B6 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				681125452613E30700BD55B6 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		681125492613E92E00BD55B6 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6811254A2613E94700BD55B6 /* MapViewController.swift */,
+			);
+			path = MapViewController;
+			sourceTree = "<group>";
+		};
 		6842D68225F4D6B6002608DA = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +203,8 @@
 		68D05FDC25FC016E00272841 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				681125492613E92E00BD55B6 /* MapViewController */,
+				681125442613E2D600BD55B6 /* TabBar */,
 				685ACC7826000AD100D5B256 /* Registration */,
 				685ACC6925FFFEAA00D5B256 /* CreateEvent */,
 				68D05FEF25FE47D000272841 /* Main */,
@@ -313,12 +335,14 @@
 			files = (
 				685ACC7A26000AF000D5B256 /* LoginViewController.swift in Sources */,
 				685ACC5C25FFF6BD00D5B256 /* CustomButton.swift in Sources */,
+				681125462613E30700BD55B6 /* TabBarViewController.swift in Sources */,
 				68D05FF625FE579300272841 /* CollectionViewCell.swift in Sources */,
 				689B3B2F260E1128000F5413 /* PopularEventCollectionViewCell.swift in Sources */,
 				688D30862612CEBE00B29C97 /* UserTableViewCell.swift in Sources */,
 				685ACC6B25FFFEC300D5B256 /* CreateEventViewController.swift in Sources */,
 				6842D69325F4D6B6002608DA /* ViewController.swift in Sources */,
 				68D05FEC25FE425D00272841 /* EventCollectionViewCell.swift in Sources */,
+				6811254B2613E94700BD55B6 /* MapViewController.swift in Sources */,
 				685ACC75260003DB00D5B256 /* AddEventTableViewCell.swift in Sources */,
 				6842D6B025F4ED25002608DA /* UIColor.swift in Sources */,
 				6842D68F25F4D6B6002608DA /* AppDelegate.swift in Sources */,

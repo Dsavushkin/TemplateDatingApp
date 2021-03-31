@@ -11,25 +11,18 @@ class CreateEventViewController: UIViewController {
 
 //    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var locationButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        tableView.register(UINib(nibName: "AddEventTableViewCell", bundle: nil), forCellReuseIdentifier: "addCell")
-        // Do any additional setup after loading the view.
+
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func locationAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "map", sender: nil)
     }
-    */
-
 }
 
 extension CreateEventViewController: UITableViewDelegate, UITableViewDataSource{

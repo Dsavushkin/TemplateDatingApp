@@ -36,10 +36,10 @@
             </objects>
             <point key="canvasLocation" x="209" y="-139"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="x4H-rE-TfM">
             <objects>
-                <tabBarController storyboardIdentifier="authorizationZone" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s8a-ba-d6X" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="authorizationZone" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s8a-ba-d6X" customClass="TabBarViewController" customModule="TempleteDatingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="KG0-uj-Zno">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
